@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --sedans: hsl(31, 77%, 52%);
+    --suvs: hsl(184, 100%, 22%);
+    --luxury: hsl(179, 100%, 13%);
+    --paragraphs: hsla(0, 0%, 100%, 0.75);
+    --background-headings-buttons: hsl(0, 0%, 95%);
+    --secondary-font: 'Big Shoulders Display', cursive;
+    --primary-font: 'Lexend Deca', sans-serif;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--primary-font); 
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.cards-container {
+    width: 80%;    
+    max-width: 400px;
+    margin: 80px 0;
+}
+
+.card {
+    padding: 60px 30px;
+}
+
+.sedans {
+    background-color: var(--sedans);
+    border-radius: 10px 10px 0 0;
+}
+
+.suvs {
+    background-color: var(--suvs);
+}
+
+.luxury {
+    background-color: var(--luxury);
+    border-radius: 0 0 10px 10px;
+
+}
+
+.title {
+    color: var(--background-headings-buttons);
+    font-family: var(--secondary-font);
+    font-weight: 700;
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    color: var(--paragraphs);
+    font-size: 15px;
+    margin-bottom: 40px;
+}
+
+.btn {
+    border: 2px solid var(--background-headings-buttons);
+    border-radius: 25px;
+    text-transform: capitalize;
+    text-decoration: none;
+    padding: 12px 30px;
+}
+
+.btn-sedans {
+    background-color: var(--background-headings-buttons);
+    color: var(--sedans);
+}
+
+
+.btn-suvs {
+    background-color: var(--background-headings-buttons);
+    color: var(--suvs);
+}
+
+.btn-luxury {
+    background-color: var(--background-headings-buttons);
+    color: var(--luxury);
+}
+
+.btn:hover, :active {
+    background-color: transparent;
+    color: var(--background-headings-buttons);
+}
+
+@media (min-width: 1200px) {
+    .cards-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 1100px;
+        width: 70%;
+    }
+
+    .title {
+        font-size: 40px;
+        margin: 30px 0;
+    }
+
+    .card {
+        padding: 60px 50px;
+    }
+
+    .paragraph {
+        margin-bottom: 100px;
+        line-height: 25px;
+    }
+
+    .sedans {
+        border-radius: 10px 0 0 10px;
+    }
+
+    .luxury {
+        border-radius: 0 10px 10px 0;
+    }
+}
+
+@media (min-width: 1440px) {
+    .card {
+        padding: 60px 65px;
+    }
+}
